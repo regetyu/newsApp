@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout1">
+        <!-- 顶部的搜索框-->
+        <Button
+            android:id="@+id/to_search"
+            android:layout_width="match_parent"
+            android:layout_height="8mm"
+            android:gravity="center"
+            android:hint="搜索" />
+
+        <!-- 分类框-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                />
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:id="@+id/add"
+                android:text="+"/>
+        </LinearLayout>
+
+        <!-- 新闻流 -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:layout_weight="11"
+            android:id="@+id/swipeRefresLayout">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/main_list">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/layout3">
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:id="@+id/change"
+                android:text="+"
+                style="@drawable/button1"/>
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:id="@+id/login"
+                android:text="登陆"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--<include layout="@layout/activity_details"/>-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
